@@ -14,10 +14,16 @@
             <GridView ItemsSource="{Binding collection}" x:Name="APIGridView">
                 <GridView.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel Height="500" Width="650" Padding="5">
-                            <TextBlock x:Name="VideoIdTextBlock" FontSize="25" Text="{Binding videoId}" HorizontalAlignment="Center" FontWeight="Bold" TextWrapping="Wrap"/>
-                            <TextBlock x:Name="NameTextBlock" FontSize="15" Text="{Binding name}" HorizontalAlignment="Center" FontWeight="Bold" TextWrapping="Wrap"/>
-                            <TextBlock x:Name="DescriptionTextBlock" FontSize="15" Text="{Binding description}" HorizontalAlignment="Center" FontWeight="Bold" TextWrapping="Wrap"/>
+                         <StackPanel HorizontalAlignment="Left" Margin="0,0,0,30" Width="450px" BorderBrush="Black">
+                            <TextBlock Name="TitleTextBlock"
+                                       Text="{Binding title.rendered}" 
+                                       FontSize="20"
+                                       FontWeight="Black"
+                                       Foreground="Black"
+                                       Margin="33,0,0,20"/>
+                            <TextBlock x:Name="VideoIdTextBlock" FontSize="25" Text="{Binding videoId}" HorizontalAlignment="Center" FontWeight="Black"  TextWrapping="Wrap"/>
+                            <TextBlock x:Name="NameTextBlock" FontSize="15" Text="{Binding name}" HorizontalAlignment="Center" FontWeight="Black" TextWrapping="Wrap"/>
+                            <TextBlock x:Name="DescriptionTextBlock" FontSize="15" Text="{Binding description}" HorizontalAlignment="Center" FontWeight="Black" TextWrapping="Wrap"/>
                         </StackPanel>
                     </DataTemplate>
                 </GridView.ItemTemplate>
